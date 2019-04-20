@@ -6,7 +6,7 @@ namespace ChallengesWithTestsMarkVII
 {
     public class ChallengesSet01
     {
-        /*
+
         public bool AreTwoNumbersTheSame(int num1, int num2)
         {
             if (num1 == num2)
@@ -15,17 +15,13 @@ namespace ChallengesWithTestsMarkVII
             {
                 return false;
             }
-        */    
+        }   
 
         public double Subtract(double minuend, double subtrahend)
         {
-            double subtract = minuend - subtrahend;
-            return subtract;
+          return minuend - subtrahend;
         }
-              
 
-
-        /*
         public int Add(int number1, int number2)
         {
             return number1 + number2;
@@ -51,4 +47,4 @@ namespace ChallengesWithTestsMarkVII
             throw new NotImplementedException();
         }
     }
-} */
+} 
