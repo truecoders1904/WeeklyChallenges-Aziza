@@ -39,12 +39,21 @@ namespace ChallengesWithTestsMarkVII
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+            if (nameOfPerson != "")
+            {
+                return $"Hello, {nameOfPerson}!";
+
+            }
+            else
+            {
+                return "Hello!";
+            }
+            
         }
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+            return "Hey!" ;
         }
     }
 } 
