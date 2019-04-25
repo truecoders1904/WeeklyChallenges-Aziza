@@ -8,7 +8,9 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool CharacterIsALetter(char c)
         {
-            throw new NotImplementedException();
+            char ch1 = 'c';
+            bool answer = char.IsLetter(ch1);
+            return answer;
         }
 
         public bool CountOfElementsIsEven(string[] vals)
@@ -24,7 +26,7 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsNumberOdd(int num)
         {
-            throw new NotImplementedException();
+            return num % 2 != 0;
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
@@ -39,7 +41,24 @@ namespace ChallengesWithTestsMarkVII
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            int i;
+            int sum = 0;
+
+            if (numbers.Length == 0)
+            {
+                return 0;
+            }
+
+            else
+
+               for (i = 0; i < numbers.Length; i++)
+                {
+
+                    {
+                        sum += numbers[i];
+                    }
+                }
+            return sum;
         }
 
         public int SumEvens(int[] numbers)
