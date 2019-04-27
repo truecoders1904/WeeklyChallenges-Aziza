@@ -15,7 +15,23 @@ namespace ChallengesWithTestsMarkVII
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            throw new NotImplementedException();
+            int i;
+            int count = 0;
+
+            for(i =0; i < 0; i++)
+            {
+                int x = i - '0';
+
+                if (x % 2 == 0)
+                {
+                    count += (i + 1);
+                }
+
+            }
+            return true;
+
+          
+
         }
 
         public bool IsNumberEven(int number)
