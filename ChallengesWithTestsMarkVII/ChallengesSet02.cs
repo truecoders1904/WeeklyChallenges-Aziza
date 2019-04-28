@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -47,12 +48,20 @@ namespace ChallengesWithTestsMarkVII
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            throw new NotImplementedException();
+            double number = new double();
+
+            double result = number.MaxValue();
+            double nxtresult = number.MinValue();
+
+            return result + nxtresult;
+
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+            string[] words = { };
+            int shortestWord = words.Min(w => w.Length);
+            return shortestWord;
         }
 
         public int Sum(int[] numbers)
@@ -111,7 +120,18 @@ namespace ChallengesWithTestsMarkVII
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            long num = new long();
+
+            if(num % 2 == 0)
+            {
+                return num;
+            }
+
+            else
+            {
+                return num + 1;
+            }
+
         }
     }
 }
