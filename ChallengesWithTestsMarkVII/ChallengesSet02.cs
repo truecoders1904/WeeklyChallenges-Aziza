@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,59 +8,59 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool CharacterIsALetter(char c)
         {
-            char ch1 = 'c';
-            bool answer = char.IsLetter(ch1);
-            return answer;
+
+            throw new NotImplementedException();
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            int i;
-            int count = 0;
-
-            for(i =0; i < 0; i++)
-            {
-                int x = i - '0';
-
-                if (x % 2 == 0)
-                {
-                    count += (i + 1);
-                }
-
-            }
-            return true;
-
-          
-
+            return vals.Length % 2 == 0;
         }
 
         public bool IsNumberEven(int number)
         {
-            return number % 2 == 0;
+            if (number % 2 == 0)
+            {
+                return true;
+            }
+            return false;
         }
 
 
         public bool IsNumberOdd(int num)
         {
-            return num % 2 != 0;
+            if (num % 2 != 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            double number = new double();
 
-            double result = number.MaxValue();
-            double nxtresult = number.MinValue();
 
-            return result + nxtresult;
+            if (numbers == null || !numbers.Any())
+            {
+                return 0;
+            }
+            else
+            {
+                return numbers.Min() + numbers.Max();
+            }
 
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            string[] words = { };
-            int shortestWord = words.Min(w => w.Length);
-            return shortestWord;
+            if(str1.Length < str2.Length)
+            {
+                return str1.Length;
+            }
+            else
+            {
+                return str2.Length;
+            }
         }
 
         public int Sum(int[] numbers)
@@ -69,14 +68,13 @@ namespace ChallengesWithTestsMarkVII
             int i;
             int sum = 0;
 
-            if (numbers.Length == 0)
+            if (!(numbers?.Length > 0))
             {
                 return 0;
             }
 
             else
-
-               for (i = 0; i < numbers.Length; i++)
+            for (i = 0; i < numbers.Length; i++)
                 {
 
                     {
@@ -91,7 +89,7 @@ namespace ChallengesWithTestsMarkVII
             int i;
             int sum = 0;
 
-            if (numbers.Length == 0)
+            if (!(numbers?.Length > 0))
             {
                 return 0;
             }
@@ -114,22 +112,48 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsSumOdd(List<int> numbers)
         {
-            int total = numbers.Sum();
-            return total % 2 != 0;
-        }
 
-        public long CountOfPositiveOddsBelowNumber(long number)
-        {
-            long num = new long();
-
-            if(num % 2 == 0)
+            if (numbers == null)
             {
-                return num;
+                return false;
             }
 
             else
             {
-                return num + 1;
+                int total = numbers.Sum();
+
+                if (numbers.Count == 0)
+                {
+                    return false;
+                }
+                else if (total % 2 == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+           
+           
+
+        }
+
+        public long CountOfPositiveOddsBelowNumber(long number)
+        {
+            if (number < 0 || number == 0)
+            {
+                return 0;
+            }
+
+            else if (number % 2 == 0)
+            {
+                return number / 2;
+            }
+            else
+            {
+                return (number - 1) / 2;
             }
 
         }
