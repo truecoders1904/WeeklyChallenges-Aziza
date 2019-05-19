@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace ChallengesWithTestsMarkVII
 {
@@ -7,7 +9,15 @@ namespace ChallengesWithTestsMarkVII
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
-            throw new NotImplementedException();
+            int divisor = startNumber / n;
+            if (n >= startNumber)
+            {
+                return n;
+            }
+            else
+            {
+                return n * (divisor + 1);
+            }
         }
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
@@ -27,7 +37,41 @@ namespace ChallengesWithTestsMarkVII
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
+            if (words == null || words.Length == 0)
+            {
+                return "";
+            }
+
+            string newSentence = "";
+            int i = 0;
+
+            for (i = 0; i < words.Length - 1; i++)
+            {
+                if (words[i] == " ")
+                {
+                    newSentence += "";
+                }
+
+                else
+                {
+                    newSentence += words[i] + " ";
+                }
+
+            }
+
+            newSentence += words[words.Length - 1];
+            newSentence = newSentence.Trim();
+
+            if (newSentence.Length == 0)
+            {
+                return "";
+            }
+            else
+            {
+                newSentence += ".";
+            }
+
+            return Regex.Replace(newSentence, @"\s+", " ");
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
